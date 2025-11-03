@@ -2,7 +2,7 @@ export type SupportedLanguages =
 // inter languages
 	'en' | 'fr' | 'es' | 'es-mx' | 'it' | 'pt' | 'pt-br' | 'pt-pt' | 'de' | 'nl' | 'pl' | 'ru' |
 	// Asian languages
-	'ja' | 'ko' | 'zh-tw' | 'id' | 'th' | 'zh-cn'
+	'ja' | 'ko' | 'zh-tw' | 'id' | 'th' | 'zh-cn' | 'zh' // zh is the real alias for Chinese simplified cards
 
 export type Languages<T = string> = Partial<Record<SupportedLanguages, T>>
 
@@ -137,6 +137,13 @@ export interface Card {
 	 * Card Name (Including the suffix if next to card name)
 	 */
 	name: Languages
+
+	/**
+	 * Additional translations for the card (e.g., Chinese names for Pokémon)
+	 */
+	translations?: {
+		name?: Languages
+	}
 
 	/**
 	 * Card illustrator

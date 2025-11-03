@@ -7,6 +7,36 @@ import translate from './translationUtil'
 import { DB_PATH, cardIsLegal, fetchRemoteFile, getDataFolder, getLastEdit, resolveText, smartGlob } from './util'
 import { objectMap, objectPick } from '@dzeio/object-util'
 import { variant_detailed } from "../../public/v2/api";
+import { getChineseNameByDexId } from '../../../meta/translations/pokemon-names'
+
+/**
+ * Enhance a card with Chinese translation for Pokémon names
+ */
+function enhanceCardWithChineseName(card: Card): Card {
+	// Only enhance if it's a Pokémon card with a dexId
+	if (!card.dexId || !Array.isArray(card.dexId) || card.dexId.length === 0 || typeof card.name !== 'object') {
+		return card
+	}
+
+	// Use the first dexId for translation
+	const primaryDexId = card.dexId[0]
+	const chineseName = getChineseNameByDexId(primaryDexId)
+	if (!chineseName) {
+		return card
+	}
+
+	// Create enhanced card with Chinese name in translations field
+	return {
+		...card,
+		translations: {
+			...card.translations,
+			name: {
+				...(card.translations?.name || {}),
+				'zh': chineseName
+			}
+		}
+	}
+}
 
 export async function getCardPictures(cardId: string, card: Card, lang: SupportedLanguages): Promise<string | undefined> {
 	try {
@@ -22,13 +52,16 @@ export async function getCardPictures(cardId: string, card: Card, lang: Supporte
 }
 
 export async function cardToCardSimple(id: string, card: Card, lang: SupportedLanguages): Promise<CardResume> {
-	const cardName = resolveText(card.name, lang)
+	// Enhance card with Chinese name if needed
+	const enhancedCard = enhanceCardWithChineseName(card)
+	
+	const cardName = resolveText(enhancedCard.name, lang, enhancedCard.translations)
 	if (!cardName) {
-		throw new Error(`Card (${card.set.id}-${id}) has no name in (${lang})`)
+		throw new Error(`Card (${enhancedCard.set.id}-${id}) has no name in (${lang})`)
 	}
-	const img = await getCardPictures(id, card, lang)
+	const img = await getCardPictures(id, enhancedCard, lang)
 	return {
-		id: `${card.set.id}-${id}`,
+		id: `${enhancedCard.set.id}-${id}`,
 		image: img,
 		localId: id,
 		name: cardName
@@ -74,33 +107,36 @@ function variantsToVariantsDetailed(variants: CardSingle['variants'],lang: Suppo
 
 // eslint-disable-next-line max-lines-per-function
 export async function cardToCardSingle(localId: string, card: Card, lang: SupportedLanguages): Promise<CardSingle> {
-	const image = await getCardPictures(localId, card, lang)
+	// Enhance card with Chinese name if needed
+	const enhancedCard = enhanceCardWithChineseName(card)
+	
+	const image = await getCardPictures(localId, enhancedCard, lang)
 
-	if (!card.name[lang]) {
+	if (!enhancedCard.name[lang]) {
 		throw new Error(`Card (${localId}) dont exist in (${lang})`)
 	}
 
 	return {
-		category: translate('category', card.category, lang) as any,
-		id: `${card.set.id}-${localId}`,
-		illustrator: card.illustrator,
+		category: translate('category', enhancedCard.category, lang) as any,
+		id: `${enhancedCard.set.id}-${localId}`,
+		illustrator: enhancedCard.illustrator,
 		image,
 		localId,
-		name: resolveText(card.name, lang) as string,
+		name: resolveText(enhancedCard.name, lang, enhancedCard.translations) as string,
 
-		rarity: translate('rarity', card.rarity, lang) as any,
-		set: await setToSetSimple(card.set, lang),
+		rarity: translate('rarity', enhancedCard.rarity, lang) as any,
+		set: await setToSetSimple(enhancedCard.set, lang),
 
-		variants : Array.isArray(card.variants) ?
-			variantsDetailedToVariants(card.variants) : {
-			firstEdition: typeof card.variants?.firstEdition === 'boolean' ? card.variants.firstEdition : false,
-			holo: typeof card.variants?.holo === 'boolean' ? card.variants.holo : true,
-			normal: typeof card.variants?.normal === 'boolean' ? card.variants.normal : true,
-			reverse: typeof card.variants?.reverse === 'boolean' ? card.variants.reverse : true,
-			wPromo: typeof card.variants?.wPromo === 'boolean' ? card.variants.wPromo : false
+		variants : Array.isArray(enhancedCard.variants) ?
+			variantsDetailedToVariants(enhancedCard.variants) : {
+			firstEdition: typeof enhancedCard.variants?.firstEdition === 'boolean' ? enhancedCard.variants.firstEdition : false,
+			holo: typeof enhancedCard.variants?.holo === 'boolean' ? enhancedCard.variants.holo : true,
+			normal: typeof enhancedCard.variants?.normal === 'boolean' ? enhancedCard.variants.normal : true,
+			reverse: typeof enhancedCard.variants?.reverse === 'boolean' ? enhancedCard.variants.reverse : true,
+			wPromo: typeof enhancedCard.variants?.wPromo === 'boolean' ? enhancedCard.variants.wPromo : false
 		},
 
-		variants_detailed: Array.isArray(card.variants) ? card.variants?.map((variant) => {
+		variants_detailed: Array.isArray(enhancedCard.variants) ? enhancedCard.variants?.map((variant) => {
 			return {
 				type: translate('variantType', variant.type, lang) as any,
 				subtype: translate('variantSubtype', variant.subtype, lang) as any,
@@ -111,64 +147,66 @@ export async function cardToCardSingle(localId: string, card: Card, lang: Suppor
 				}) : undefined,
 				foil: variant.foil ? translate('variantFoil', variant.foil, lang) : undefined
 			}
-		}) : variantsToVariantsDetailed(card.variants,lang),
+		}) : variantsToVariantsDetailed(enhancedCard.variants,lang),
 
-		dexId: card.dexId,
-		hp: card.hp,
-		types: card.types?.map((t) => translate('types', t, lang)) as Array<Types>,
-		evolveFrom: card.evolveFrom && resolveText(card.evolveFrom, lang),
-		weight: card.weight,
-		description: card.description ? resolveText(card.description, lang) as string : undefined,
-		level: card.level,
-		stage: translate('stage', card.stage, lang) as any,
-		suffix: translate('suffix', card.suffix, lang) as any,
-		item: card.item ? {
-			name: resolveText(card.item.name, lang),
-			effect: resolveText(card.item.effect, lang)
+		dexId: enhancedCard.dexId,
+		hp: enhancedCard.hp,
+		types: enhancedCard.types?.map((t) => translate('types', t, lang)) as Array<Types>,
+		evolveFrom: enhancedCard.evolveFrom && resolveText(enhancedCard.evolveFrom, lang),
+		weight: enhancedCard.weight,
+		description: enhancedCard.description ? resolveText(enhancedCard.description, lang) as string : undefined,
+		level: enhancedCard.level,
+		stage: translate('stage', enhancedCard.stage, lang) as any,
+		suffix: translate('suffix', enhancedCard.suffix, lang) as any,
+		item: enhancedCard.item ? {
+			name: resolveText(enhancedCard.item.name, lang),
+			effect: resolveText(enhancedCard.item.effect, lang)
 		} : undefined,
 
-		abilities: card.abilities?.map((el) => ({
+		abilities: enhancedCard.abilities?.map((el) => ({
 			type: translate('abilityType', el.type, lang) as any,
 			name: resolveText(el.name, lang),
 			effect: resolveText(el.effect, lang)
 		})),
 
-		attacks: card.attacks?.map((el) => ({
+		attacks: enhancedCard.attacks?.map((el) => ({
 			cost: el.cost?.map((t) => translate('types', t, lang)) as Array<Types>,
 			name: resolveText(el.name, lang) as string,
 			effect: el.effect ? resolveText(el.effect, lang) : undefined,
 			damage: el.damage
 		})),
-		weaknesses: card.weaknesses?.map((el) => ({
+		weaknesses: enhancedCard.weaknesses?.map((el) => ({
 			type: translate('types', el.type, lang) as Types,
 			value: el.value
 		})),
 
-		resistances: card.resistances?.map((el) => ({
+		resistances: enhancedCard.resistances?.map((el) => ({
 			type: translate('types', el.type, lang) as Types,
 			value: el.value
 		})),
 
-		retreat: card.retreat,
+		retreat: enhancedCard.retreat,
 
-		effect: card.effect ? resolveText(card.effect, lang) : undefined,
+		effect: enhancedCard.effect ? resolveText(enhancedCard.effect, lang) : undefined,
 
-		trainerType: translate('trainerType', card.trainerType, lang) as any,
-		energyType: translate('energyType', card.energyType, lang) as any,
-		regulationMark: card.regulationMark,
+		trainerType: translate('trainerType', enhancedCard.trainerType, lang) as any,
+		energyType: translate('energyType', enhancedCard.energyType, lang) as any,
+		regulationMark: enhancedCard.regulationMark,
 
 		legal: {
-			standard: cardIsLegal('standard', card, localId),
-			expanded: cardIsLegal('expanded', card, localId)
+			standard: cardIsLegal('standard', enhancedCard, localId),
+			expanded: cardIsLegal('expanded', enhancedCard, localId)
 		},
-		boosters: card.boosters ? objectMap(objectPick(card.set.boosters, ...card.boosters), (booster, id) => ({
-			id: `boo_${card.set.id}-${id}`,
+		boosters: enhancedCard.boosters ? objectMap(objectPick(enhancedCard.set.boosters, ...enhancedCard.boosters), (booster, id) => ({
+			id: `boo_${enhancedCard.set.id}-${id}`,
 			name: resolveText(booster.name, lang),
 			// images will be coming soon...
 		})) : undefined,
-		updated: await getCardLastEdit(localId, card, lang),
+		updated: await getCardLastEdit(localId, enhancedCard, lang),
 
-		thirdParty: card.thirdParty
+		thirdParty: enhancedCard.thirdParty,
+		
+		translations: enhancedCard.translations
 	}
 }
 

@@ -334,6 +334,16 @@ export interface Card extends CardResume {
 	boosters?: Array<Booster>
 
 	updated: string
+
+	/**
+	 * 
+	 * Additional translations for the card (e.g., Chinese names for Pokémon)
+	 */
+	translations?: {
+		name?: {
+			[key: string]: string
+		}
+	}
 }
 
 /**

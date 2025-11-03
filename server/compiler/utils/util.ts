@@ -181,8 +181,18 @@ export function getLastEdit(path: string): string {
 	return date
 }
 
-export function resolveText<T>(text: Languages<T> | undefined, lang: SupportedLanguages): T | undefined {
+export function resolveText<T>(text: Languages<T> | undefined, lang: SupportedLanguages, translations?: { name?: Languages<T> }): T | undefined {
 	if (!text) return text as undefined
+
+	// First check translations if available and lang starts with 'zh'
+	if (translations?.name && lang.startsWith('zh')) {
+		const translatedText = translations.name[lang] || translations.name['zh']
+		if (translatedText !== undefined) {
+			return translatedText
+		}
+	}
+
+	// Fall back to standard name resolution
 	let res: T | undefined = text[lang]
 	if (typeof res === 'undefined' && !lang.includes('-')) {
 		const key = Object.keys(text).find(key => key.startsWith(lang))
