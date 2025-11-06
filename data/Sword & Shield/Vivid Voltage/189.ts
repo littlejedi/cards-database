@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [839],
 	set: Set,
 
+	chineseName: "巨炭山",
+
 	name: {
 		fr: "Monthracite VMAX",
 		en: "Coalossal VMAX",

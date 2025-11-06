@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [847],
 	set: Set,
 
+	chineseName: "戽斗尖梭",
+
 	evolveFrom: {
 		en: "Arrokuda",
 		fr: "Embrochet",

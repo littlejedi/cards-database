@@ -15,6 +15,8 @@ const card: Card = {
 	rarity: "Ultra Rare",
 	category: "Pokemon",
 	set: Set,
+
+	chineseName: "爱管侍",
 	hp: 180,
 
 	types: [

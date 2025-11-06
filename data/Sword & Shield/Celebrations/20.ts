@@ -4,6 +4,8 @@ import Set from '../Celebrations'
 const card: Card = {
 	set: Set,
 
+	chineseName: "帝牙卢卡",
+
 	variants: {
 		normal: false,
 		reverse: false,

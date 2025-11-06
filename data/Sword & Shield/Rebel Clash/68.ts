@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [848],
 	set: Set,
 
+	chineseName: "电音婴",
+
 	attacks: [
 		{
 			cost: [

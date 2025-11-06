@@ -3,6 +3,8 @@ import Set from "../SV11W";
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "舞天鹅",
 	name: {
 		ja: "スワンナ",
 	},

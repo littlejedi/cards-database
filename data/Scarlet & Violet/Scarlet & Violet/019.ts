@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [918],
 	set: Set,
 
+	chineseName: "操陷蛛",
+
 	name: {
 		en: "Spidops ex",
 		fr: "Filentrappe-ex",

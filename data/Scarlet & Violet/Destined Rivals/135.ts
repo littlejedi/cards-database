@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [860],
 	set: Set,
 
+	chineseName: "诈唬魔",
+
 	name: {
 		en: "Marnie's Morgrem",
 		fr: "Fourbelin de Rosemary",

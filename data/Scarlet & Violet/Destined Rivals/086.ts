@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [703],
 	set: Set,
 
+	chineseName: "小碎钻",
+
 	name: {
 		en: "Steven's Carbink",
 		fr: "Strassie de Pierre",

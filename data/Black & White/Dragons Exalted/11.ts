@@ -16,6 +16,8 @@ const card: Card = {
 	category: "Pokemon",
 	set: Set,
 
+	chineseName: "铁面忍者",
+
 	dexId: [
 		291,
 	],

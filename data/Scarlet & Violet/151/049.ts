@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [49],
 	set: Set,
 
+	chineseName: "摩鲁蛾",
+
 	name: {
 		fr: "Aéromite",
 		en: "Venomoth",

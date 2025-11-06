@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [844],
 	set: Set,
 
+	chineseName: "沙螺蟒",
+
 	name: {
 		en: "Hop's Sandaconda",
 		fr: "Dunaconda de Nabil",

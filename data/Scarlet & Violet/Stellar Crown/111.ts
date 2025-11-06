@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [1021],
 	set: Set,
 
+	chineseName: "猛雷鼓",
+
 	name: {
 		en: "Raging Bolt",
 		fr: "Ire-Foudre",

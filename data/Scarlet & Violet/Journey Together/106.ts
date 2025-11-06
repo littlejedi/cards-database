@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [618],
 	set: Set,
 
+	chineseName: "泥巴鱼",
+
 	name: {
 		en: "Galarian Stunfisk",
 		fr: "Limonde de Galar",

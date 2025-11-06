@@ -4,6 +4,8 @@ import Set from "../SV2P"
 const card: Card = {
 	set: Set,
 
+	chineseName: "大嘴鸥",
+
 	name: {
 		ja: "ペリッパー",
 		'zh-tw': "大嘴鷗",

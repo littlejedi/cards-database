@@ -15,6 +15,8 @@ const card: Card = {
 	rarity: "Holo Rare VMAX",
 	category: "Pokemon",
 	set: Set,
+
+	chineseName: "卡比兽",
 	hp: 340,
 
 	types: [

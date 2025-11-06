@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [849],
 	set: Set,
 
+	chineseName: "颤弦蝾螈",
+
 	evolveFrom: {
 		en: "Toxel",
 		fr: "Toxizap",

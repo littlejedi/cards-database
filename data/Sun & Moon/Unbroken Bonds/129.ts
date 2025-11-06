@@ -18,6 +18,9 @@ const card: Card = {
 	dexId: [809],
 
 	set: Set,
+
+
+	chineseName: "美录梅塔",
 	hp: 150,
 
 	types: [

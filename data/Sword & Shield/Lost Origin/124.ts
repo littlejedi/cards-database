@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [208],
 	set: Set,
 
+	chineseName: "大钢蛇",
+
 	name: {
 		en: "Radiant Steelix",
 		fr: "Steelix Radieux",

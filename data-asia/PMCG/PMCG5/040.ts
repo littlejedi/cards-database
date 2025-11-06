@@ -3,6 +3,8 @@ import Set from "../PMCG5"
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "三合一磁怪",
 	name: {
 		ja: "Surge's Magneton中t",
 	},

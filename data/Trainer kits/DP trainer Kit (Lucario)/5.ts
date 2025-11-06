@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [66],
 	set: Set,
 
+	chineseName: "腕力",
+
 	name: {
 		en: "Machop"
 	},

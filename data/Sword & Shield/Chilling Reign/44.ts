@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [892],
 	set: Set,
 
+	chineseName: "武道熊师",
+
 	name: {
 		en: "Rapid Strike Urshifu",
 		fr: "Shifours Mille Poings",

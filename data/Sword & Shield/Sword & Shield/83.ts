@@ -15,6 +15,8 @@ const card: Card = {
 	rarity: "Common",
 	category: "Pokemon",
 	set: Set,
+
+	chineseName: "鬼斯",
 	hp: 60,
 
 	types: [

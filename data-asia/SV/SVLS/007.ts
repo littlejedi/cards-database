@@ -4,6 +4,8 @@ import Set from "../SVLS"
 const card: Card = {
 	set: Set,
 
+	chineseName: "象征鸟",
+
 	name: {
 		ja: "シンボラー"
 	},

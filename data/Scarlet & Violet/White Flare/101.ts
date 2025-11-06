@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [607],
 	set: Set,
 
+	chineseName: "烛光灵",
+
 	name: {
 		en: "Litwick",
 		fr: "Funécire",

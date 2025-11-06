@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [132],
 	set: Set,
 
+	chineseName: "百变怪",
+
 	name: {
 		fr: "Métamorph",
 		en: "Ditto",

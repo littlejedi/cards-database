@@ -18,6 +18,8 @@ const card: Card = {
 	category: "Pokemon",
 	set: Set,
 
+	chineseName: "咕咕鸽",
+
 	evolveFrom: {
 		en: "Pidove",
 		fr: "Poichigeon",

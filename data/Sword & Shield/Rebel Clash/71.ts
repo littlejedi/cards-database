@@ -16,6 +16,8 @@ const card: Card = {
 	category: "Pokemon",
 	dexId: [849],
 	set: Set,
+
+	chineseName: "颤弦蝾螈",
 	hp: 320,
 
 	evolveFrom: {

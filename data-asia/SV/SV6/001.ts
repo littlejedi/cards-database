@@ -1,6 +1,7 @@
 import { Card } from '../../../interfaces'
 import set from '../SV6'
 const card: Card = {
+	chineseName: "向日种子",
 	name: {
 		ja: "ヒマナッツ",
 		'zh-tw': "向日種子",

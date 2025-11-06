@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [579],
 	set: Set,
 
+	chineseName: "人造细胞卵",
+
 	name: {
 		en: "Reuniclus",
 	},

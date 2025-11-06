@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [1005],
 	set: Set,
 
+	chineseName: "轰鸣月",
+
 	name: {
 		en: "Roaring Moon",
 		fr: "Rugit-Lune",

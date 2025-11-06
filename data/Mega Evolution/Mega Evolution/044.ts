@@ -4,6 +4,8 @@ import Set from "../Mega Evolution"
 const card: Card = {
 	set: Set,
 
+	chineseName: "冰砌鹅",
+
 	name: {
 		en: "Eiscue",
 		fr: "Bekaglaçon",

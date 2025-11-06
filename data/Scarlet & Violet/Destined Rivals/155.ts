@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [474],
 	set: Set,
 
+	chineseName: "多边兽乙型",
+
 	name: {
 		en: "Team Rocket's Porygon-Z",
 		fr: "Porygon-Z de la Team Rocket",

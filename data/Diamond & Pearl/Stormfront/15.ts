@@ -13,6 +13,8 @@ const card: Card = {
 	category: "Pokemon",
 	set: Set,
 
+	chineseName: "龙王蝎",
+
 	dexId: [
 		452,
 	],

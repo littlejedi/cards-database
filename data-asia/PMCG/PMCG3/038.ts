@@ -3,6 +3,8 @@ import Set from "../PMCG3"
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "隆隆岩",
 	name: {
 		ja: "ゴーレム",
 	},

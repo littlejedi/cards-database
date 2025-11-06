@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [993],
 	set: Set,
 
+	chineseName: "铁脖颈",
+
 	name: {
 		en: "Iron Jugulis",
 		fr: "Têtes-de-Fer",

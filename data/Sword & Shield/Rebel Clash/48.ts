@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [555],
 	set: Set,
 
+	chineseName: "达摩狒狒",
+
 	evolveFrom: {
 		en: "Galarian Darumaka",
 		fr: "Darumarond de Galar",

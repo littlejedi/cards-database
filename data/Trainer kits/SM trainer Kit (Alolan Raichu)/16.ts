@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [736],
 	set: Set,
 
+	chineseName: "强颚鸡母虫",
+
 	name: {
 		en: "Grubbin",
 		fr: "Larvibule",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [100],
 	set: Set,
 
+	chineseName: "霹雳电球",
+
 	name: {
 		en: "Hisuian Voltorb",
 		fr: "Voltorbe de Hisui",

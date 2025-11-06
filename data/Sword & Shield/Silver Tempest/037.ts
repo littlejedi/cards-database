@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [320],
 	set: Set,
 
+	chineseName: "吼吼鲸",
+
 	name: {
 		en: "Wailmer",
 		fr: "Wailmer",

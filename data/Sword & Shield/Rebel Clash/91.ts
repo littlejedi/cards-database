@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [887],
 	set: Set,
 
+	chineseName: "多龙巴鲁托",
+
 	evolveFrom: {
 		en: "Drakloak",
 		fr: "Dispareptil",

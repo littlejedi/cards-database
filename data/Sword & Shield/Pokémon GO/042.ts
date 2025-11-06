@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [20],
 	set: Set,
 
+	chineseName: "拉达",
+
 	name: {
 		en: "Alolan Raticate",
 		fr: "Rattatac d'Alola",

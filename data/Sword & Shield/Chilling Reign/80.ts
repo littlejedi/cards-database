@@ -15,6 +15,8 @@ const card: Card = {
 	rarity: "Holo Rare V",
 	category: "Pokemon",
 	set: Set,
+
+	chineseName: "闪电鸟",
 	hp: 200,
 	dexId: [145],
 

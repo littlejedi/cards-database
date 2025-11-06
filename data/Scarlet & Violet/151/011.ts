@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [11],
 	set: Set,
 
+	chineseName: "铁甲蛹",
+
 	name: {
 		fr: "Chrysacier",
 		en: "Metapod",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [824],
 	set: Set,
 
+	chineseName: "索侦虫",
+
 	name: {
 		en: "Team Rocket's Blipbug",
 		fr: "Larvadar de la Team Rocket",

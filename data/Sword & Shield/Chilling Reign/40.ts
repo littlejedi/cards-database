@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [788],
 	set: Set,
 
+	chineseName: "卡璞・鳍鳍",
+
 	name: {
 		en: "Tapu Fini",
 		fr: "Tokopisco",

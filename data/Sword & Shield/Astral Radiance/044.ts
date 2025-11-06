@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [902],
 	set: Set,
 
+	chineseName: "幽尾玄鱼",
+
 	name: {
 		en: "Hisuian Basculegion",
 		fr: "Paragruel de Hisui",

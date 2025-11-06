@@ -13,6 +13,8 @@ const card: Card = {
 	category: "Trainer",
 	set: Set,
 
+	chineseName: "魅力喵",
+
 	dexId: [
 		431,
 	],

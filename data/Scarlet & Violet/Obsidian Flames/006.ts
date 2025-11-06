@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [283],
 	set: Set,
 
+	chineseName: "溜溜糖球",
+
 	name: {
 		fr: "Arakdo",
 		en: "Surskit",

@@ -4,6 +4,8 @@ import Set from "../SVP Black Star Promos"
 const card: Card = {
 	set: Set,
 
+	chineseName: "烈咬陆鲨",
+
 	name: {
 		en: "Cynthia's Garchomp ex",
 	},

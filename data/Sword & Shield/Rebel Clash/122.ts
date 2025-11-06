@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [687],
 	set: Set,
 
+	chineseName: "乌贼王",
+
 	evolveFrom: {
 		en: "Malamar V",
 		fr: "Sepiatroce-V",

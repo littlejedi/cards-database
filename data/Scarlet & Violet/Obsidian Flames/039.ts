@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [631],
 	set: Set,
 
+	chineseName: "熔蚁兽",
+
 	name: {
 		fr: "Aflamanoir",
 		en: "Heatmor",

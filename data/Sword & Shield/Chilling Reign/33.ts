@@ -15,6 +15,8 @@ const card: Card = {
 	rarity: "Common",
 	category: "Pokemon",
 	set: Set,
+
+	chineseName: "飘浮泡泡",
 	hp: 70,
 	dexId: [351],
 

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [24],
 	set: Set,
 
+	chineseName: "阿柏怪",
+
 	name: {
 		en: "Team Rocket's Arbok",
 		fr: "Arbok de la Team Rocket",

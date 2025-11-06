@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [1017],
 	set: Set,
 
+	chineseName: "厄诡椪",
+
 	name: {
 		en: "Teal Mask Ogerpon ex",
 		fr: "Ogerpon Masque Turquoise-ex",

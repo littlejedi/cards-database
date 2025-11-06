@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [832],
 	set: Set,
 
+	chineseName: "毛毛角羊",
+
 	name: {
 		en: "Hop's Dubwool",
 		fr: "Moumouflon de Nabil",

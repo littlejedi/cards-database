@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [376],
 	set: Set,
 
+	chineseName: "巨金怪",
+
 	name: {
 		en: "Metagross",
 		fr: "Métalosse",

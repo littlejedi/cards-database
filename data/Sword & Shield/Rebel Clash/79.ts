@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [864],
 	set: Set,
 
+	chineseName: "魔灵珊瑚",
+
 	evolveFrom: {
 		en: "Galarian Corsola",
 		fr: "Corayon de Galar",

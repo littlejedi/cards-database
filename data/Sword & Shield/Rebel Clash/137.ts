@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [879],
 	set: Set,
 
+	chineseName: "大王铜象",
+
 	evolveFrom: {
 		en: "Copperajah V",
 		fr: "Pachyradjah-V",

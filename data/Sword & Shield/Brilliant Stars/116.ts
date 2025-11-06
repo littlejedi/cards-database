@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [351],
 	set: Set,
 
+	chineseName: "飘浮泡泡",
+
 	name: {
 		en: "Castform",
 		fr: "Morphéo",

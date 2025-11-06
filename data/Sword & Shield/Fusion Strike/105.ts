@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [848],
 	set: Set,
 
+	chineseName: "电音婴",
+
 	name: {
 		en: "Toxel",
 		fr: "Toxizap",

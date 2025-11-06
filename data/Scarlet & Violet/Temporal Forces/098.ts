@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [989],
 	set: Set,
 
+	chineseName: "沙铁皮",
+
 	name: {
 		en: "Sandy Shocks",
 		fr: "Pelage-Sablé",

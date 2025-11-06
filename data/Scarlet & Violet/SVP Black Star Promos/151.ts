@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [1020],
 	set: Set,
 
+	chineseName: "破空焰",
+
 	name: {
 		en: "Gouging Fire",
 		fr: "Feu-Perçant",

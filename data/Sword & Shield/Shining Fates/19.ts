@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [815],
 	set: Set,
 
+	chineseName: "闪焰王牌",
+
 	name: {
 		fr: "Pyrobut VMAX",
 		en: "Cinderace VMAX",

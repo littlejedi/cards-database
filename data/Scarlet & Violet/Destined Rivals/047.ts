@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [121],
 	set: Set,
 
+	chineseName: "宝石海星",
+
 	name: {
 		en: "Misty's Starmie",
 		fr: "Staross d'Ondine",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [219],
 	set: Set,
 
+	chineseName: "熔岩蜗牛",
+
 	name: {
 		en: "Ethan's Magcargo",
 		fr: "Volcaropod de Luth",

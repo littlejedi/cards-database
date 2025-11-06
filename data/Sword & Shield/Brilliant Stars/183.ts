@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [146],
 	set: Set,
 
+	chineseName: "火焰鸟",
+
 	name: {
 		en: "Galarian Moltres V",
 		fr: "Sulfura de Galar V",

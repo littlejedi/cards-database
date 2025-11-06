@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [866],
 	set: Set,
 
+	chineseName: "踏冰人偶",
+
 	evolveFrom: {
 		en: "Galarian Mr. Mime",
 		fr: "M. Mime de Galar",

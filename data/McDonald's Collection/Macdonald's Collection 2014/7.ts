@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [679],
 	set: Set,
 
+	chineseName: "独剑鞘",
+
 	variants: {
 		normal: false,
 		reverse: false,

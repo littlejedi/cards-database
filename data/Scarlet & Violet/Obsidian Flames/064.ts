@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [82],
 	set: Set,
 
+	chineseName: "三合一磁怪",
+
 	name: {
 		fr: "Magnéton",
 		en: "Magneton",

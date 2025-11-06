@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [860],
 	set: Set,
 
+	chineseName: "诈唬魔",
+
 	evolveFrom: {
 		en: "Impidimp",
 		fr: "Grimalin",

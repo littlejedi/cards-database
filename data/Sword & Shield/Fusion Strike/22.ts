@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [812],
 	set: Set,
 
+	chineseName: "轰擂金刚猩",
+
 	name: {
 		en: "Rillaboom V",
 		fr: "Gorythmic V",

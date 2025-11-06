@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [820],
 	set: Set,
 
+	chineseName: "藏饱栗鼠",
+
 	evolveFrom: {
 		en: "Skwovet",
 		fr: "Rongourmand",

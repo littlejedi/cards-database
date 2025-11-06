@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [938],
 	set: Set,
 
+	chineseName: "光蚪仔",
+
 	name: {
 		en: "Iono's Tadbulb",
 		fr: "Têtampoule de Mashynn",

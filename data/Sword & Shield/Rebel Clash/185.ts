@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [870],
 	set: Set,
 
+	chineseName: "列阵兵",
+
 	abilities: [
 		{
 			type: "Ability",

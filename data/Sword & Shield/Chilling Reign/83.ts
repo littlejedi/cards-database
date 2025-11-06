@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [867],
 	set: Set,
 
+	chineseName: "迭失板",
+
 	name: {
 		en: "Galarian Runerigus",
 		fr: "Tutétékri de Galar",

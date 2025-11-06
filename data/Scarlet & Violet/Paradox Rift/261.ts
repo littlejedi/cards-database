@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [1006],
 	set: Set,
 
+	chineseName: "铁武者",
+
 	name: {
 		en: "Iron Valiant ex",
 		fr: "Garde-de-Fer-ex",

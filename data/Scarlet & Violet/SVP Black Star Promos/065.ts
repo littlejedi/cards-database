@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [985],
 	set: Set,
 
+	chineseName: "吼叫尾",
+
 	name: {
 		en: "Scream Tail",
 		fr: "Hurle-Queue",

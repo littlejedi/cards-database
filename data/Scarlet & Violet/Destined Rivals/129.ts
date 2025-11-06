@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [442],
 	set: Set,
 
+	chineseName: "花岩怪",
+
 	name: {
 		en: "Cynthia's Spiritomb",
 		fr: "Spiritomb de Cynthia",

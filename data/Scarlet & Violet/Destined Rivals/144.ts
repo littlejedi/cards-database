@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [375],
 	set: Set,
 
+	chineseName: "金属怪",
+
 	name: {
 		en: "Steven's Metang",
 		fr: "Métang de Pierre",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [980],
 	set: Set,
 
+	chineseName: "土王",
+
 	name: {
 		en: "Paldean Clodsire ex",
 		fr: "Terraiste de Paldea-ex",

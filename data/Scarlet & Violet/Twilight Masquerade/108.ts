@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [969],
 	set: Set,
 
+	chineseName: "晶光芽",
+
 	name: {
 		en: "Glimmet",
 		fr: "Germéclat",

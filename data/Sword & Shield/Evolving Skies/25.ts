@@ -4,6 +4,8 @@ import Set from '../Evolving Skies'
 const card: Card = {
 	set: Set,
 
+	chineseName: "哥达鸭",
+
 	variants: {
 		normal: true,
 		reverse: true,

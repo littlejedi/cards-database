@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [312],
 	set: Set,
 
+	chineseName: "負电拍拍",
+
 	name: {
 		en: "Minun"
 	},

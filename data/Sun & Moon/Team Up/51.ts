@@ -18,6 +18,9 @@ const card: Card = {
 
 	set: Set,
 
+
+	chineseName: "卡璞・鸣鸣",
+
 	hp: 130,
 	types: [
 		"Lightning",

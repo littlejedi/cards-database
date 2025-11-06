@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [503],
 	set: Set,
 
+	chineseName: "大剑鬼",
+
 	name: {
 		en: "Hisuian Samurott VSTAR",
 		fr: "Clamiral de Hisui VSTAR",

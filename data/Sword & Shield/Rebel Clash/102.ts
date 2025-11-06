@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [867],
 	set: Set,
 
+	chineseName: "迭失板",
+
 	evolveFrom: {
 		en: "Galarian Yamask",
 		fr: "Tutafeh de Galar",

@@ -10,6 +10,9 @@ const card: Card = {
 	category: "Trainer",
 
 	set: Set,
+
+
+	chineseName: "力壮鸡",
 	dexId: [
 		256,
 	],

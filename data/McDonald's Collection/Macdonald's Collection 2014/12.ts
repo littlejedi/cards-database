@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [676],
 	set: Set,
 
+	chineseName: "多丽米亚",
+
 	variants: {
 		normal: false,
 		reverse: false,

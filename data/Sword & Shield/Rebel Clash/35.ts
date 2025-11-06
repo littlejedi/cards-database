@@ -18,6 +18,8 @@ const card: Card = {
 	category: "Pokemon",
 	set: Set,
 
+	chineseName: "闪焰王牌",
+
 	abilities: [
 		{
 			type: "Ability",

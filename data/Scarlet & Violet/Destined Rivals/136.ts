@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [861],
 	set: Set,
 
+	chineseName: "长毛巨魔",
+
 	name: {
 		en: "Marnie's Grimmsnarl ex",
 		fr: "Angoliath-ex de Rosemary",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [464],
 	set: Set,
 
+	chineseName: "超甲狂犀",
+
 	name: {
 		en: "Rhyperior",
 		fr: "Rhinastoc",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [433],
 	set: Set,
 
+	chineseName: "铃铛响",
+
 	name: {
 		en: "Team Rocket's Chingling",
 		fr: "Korillon de la Team Rocket",

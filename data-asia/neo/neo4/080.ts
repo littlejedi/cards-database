@@ -3,6 +3,8 @@ import Set from "../neo4"
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "镰刀盔",
 	name: {
 		ja: "輝くカブトップ",
 	},

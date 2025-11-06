@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [748],
 	set: Set,
 
+	chineseName: "超坏星",
+
 	name: {
 		en: "Toxapex",
 		fr: "Prédastérie",

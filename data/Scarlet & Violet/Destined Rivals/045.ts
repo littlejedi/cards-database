@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [54],
 	set: Set,
 
+	chineseName: "可达鸭",
+
 	name: {
 		en: "Misty's Psyduck",
 		fr: "Psykokwak d'Ondine",

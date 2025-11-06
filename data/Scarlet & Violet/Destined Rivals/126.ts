@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [110],
 	set: Set,
 
+	chineseName: "双弹瓦斯",
+
 	name: {
 		en: "Team Rocket's Weezing",
 		fr: "Smogogo de la Team Rocket",

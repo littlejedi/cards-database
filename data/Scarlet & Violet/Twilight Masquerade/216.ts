@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [901],
 	set: Set,
 
+	chineseName: "月月熊",
+
 	name: {
 		en: "Bloodmoon Ursaluna ex",
 		fr: "Ursaking Lune Vermeille-ex",

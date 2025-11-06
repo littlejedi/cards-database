@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [483],
 	set: Set,
 
+	chineseName: "帝牙卢卡",
+
 	name: {
 		en: "Origin Forme Dialga VSTAR",
 		fr: "Dialga Originel VSTAR",

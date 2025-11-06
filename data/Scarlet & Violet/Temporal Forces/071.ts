@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [578],
 	set: Set,
 
+	chineseName: "双卵细胞球",
+
 	name: {
 		en: "Duosion",
 		fr: "Méios",

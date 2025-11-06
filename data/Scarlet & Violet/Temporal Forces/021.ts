@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [947],
 	set: Set,
 
+	chineseName: "怖纳噬草",
+
 	name: {
 		en: "Brambleghast",
 		fr: "Virevorreur",

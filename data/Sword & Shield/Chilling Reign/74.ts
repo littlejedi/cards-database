@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [898],
 	set: Set,
 
+	chineseName: "蕾冠王",
+
 	name: {
 		en: "Shadow Rider Calyrex V",
 		fr: "Sylveroy Cavalier d'Effroi V",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [713],
 	set: Set,
 
+	chineseName: "冰岩怪",
+
 	name: {
 		en: "Hisuian Avalugg",
 		fr: "Séracrawl de Hisui",

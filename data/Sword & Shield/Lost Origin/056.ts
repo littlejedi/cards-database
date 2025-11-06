@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [462],
 	set: Set,
 
+	chineseName: "自爆磁怪",
+
 	name: {
 		en: "Magnezone V",
 		fr: "Magnézone V",

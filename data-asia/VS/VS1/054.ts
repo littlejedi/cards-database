@@ -3,6 +3,8 @@ import Set from "../VS1"
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "电灯怪",
 	name: {
 		ja: "Surge's Lanturn中t",
 	},

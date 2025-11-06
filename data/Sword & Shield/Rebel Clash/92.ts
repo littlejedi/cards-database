@@ -18,6 +18,8 @@ const card: Card = {
 	category: "Pokemon",
 	set: Set,
 
+	chineseName: "多龙巴鲁托",
+
 	attacks: [
 		{
 			cost: [

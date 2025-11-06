@@ -4,6 +4,8 @@ import Set from "../SLL"
 const card: Card = {
 	set: Set,
 
+	chineseName: "岩狗狗",
+
 	name: {
 		'zh-tw': "岩狗狗",
 		ja: "イワンコ"

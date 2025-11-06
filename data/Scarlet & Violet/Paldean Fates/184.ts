@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [302],
 	set: Set,
 
+	chineseName: "勾魂眼",
+
 	name: {
 		en: "Sableye",
 		fr: "Ténéfix",

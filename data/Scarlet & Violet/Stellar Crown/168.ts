@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [596],
 	set: Set,
 
+	chineseName: "电蜘蛛",
+
 	name: {
 		en: "Galvantula ex",
 		fr: "Mygavolt-ex",

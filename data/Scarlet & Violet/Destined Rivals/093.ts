@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [185],
 	set: Set,
 
+	chineseName: "树才怪",
+
 	name: {
 		en: "Ethan's Sudowoodo",
 		fr: "Simularbre de Luth",

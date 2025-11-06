@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [79],
 	set: Set,
 
+	chineseName: "呆呆兽",
+
 	variants: {
 		normal: false,
 		reverse: false,

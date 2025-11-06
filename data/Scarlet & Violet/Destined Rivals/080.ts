@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [97],
 	set: Set,
 
+	chineseName: "引梦貘人",
+
 	name: {
 		en: "Team Rocket's Hypno",
 		fr: "Hypnomade de la Team Rocket",

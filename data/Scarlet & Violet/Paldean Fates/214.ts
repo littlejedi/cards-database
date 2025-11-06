@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [956],
 	set: Set,
 
+	chineseName: "超能艳鸵",
+
 	name: {
 		en: "Espathra ex",
 		fr: "Cléopsytra-ex",

@@ -4,6 +4,8 @@ import Set from "../SV5a"
 const card: Card = {
 	set: Set,
 
+	chineseName: "古月鸟",
+
 	name: {
 		ja: "ウッウ"
 	},

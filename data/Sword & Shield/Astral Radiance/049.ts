@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [866],
 	set: Set,
 
+	chineseName: "踏冰人偶",
+
 	name: {
 		en: "Galarian Mr. Rime V",
 		fr: "M. Glaquette de Galar V",

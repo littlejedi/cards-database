@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [424],
 	set: Set,
 
+	chineseName: "双尾怪手",
+
 	name: {
 		en: "Ambipom",
 		fr: "Capidextre",

@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [101],
 	set: Set,
 
+	chineseName: "顽皮雷弹",
+
 	name: {
 		en: "Iono's Electrode",
 		fr: "Électrode de Mashynn",

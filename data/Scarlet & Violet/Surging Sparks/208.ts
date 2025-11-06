@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [51],
 	set: Set,
 
+	chineseName: "三地鼠",
+
 	name: {
 		en: "Alolan Dugtrio",
 		fr: "Triopikeur d'Alola",

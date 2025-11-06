@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [426],
 	set: Set,
 
+	chineseName: "随风球",
+
 	name: {
 		en: "Drifblim",
 		fr: "Grodrive",

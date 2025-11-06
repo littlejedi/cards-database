@@ -5,6 +5,8 @@ const card: Card = {
 	dexId: [864],
 	set: Set,
 
+	chineseName: "魔灵珊瑚",
+
 	name: {
 		en: "Galarian Cursola",
 		fr: "Corayôme de Galar",

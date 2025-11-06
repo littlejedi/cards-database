@@ -4,6 +4,8 @@ import Set from "../SPD"
 const card: Card = {
 	set: Set,
 
+	chineseName: "宝石海星",
+
 	name: {
 		'zh-tw': "寶石海星",
 		ja: "スターミー"

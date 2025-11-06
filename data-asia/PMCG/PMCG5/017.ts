@@ -3,6 +3,8 @@ import Set from "../PMCG5"
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "六尾",
 	name: {
 		ja: "Brock's Vulpix（LV.16）",
 	},

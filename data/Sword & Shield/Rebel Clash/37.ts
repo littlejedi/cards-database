@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [122],
 	set: Set,
 
+	chineseName: "魔墙人偶",
+
 	attacks: [
 		{
 			cost: [

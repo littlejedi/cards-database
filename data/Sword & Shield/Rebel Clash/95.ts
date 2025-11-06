@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [865],
 	set: Set,
 
+	chineseName: "葱游兵",
+
 	evolveFrom: {
 		en: "Galarian Farfetch'd",
 		fr: "Canarticho de Galar",

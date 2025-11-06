@@ -17,6 +17,8 @@ const card: Card = {
 	dexId: [885],
 	set: Set,
 
+	chineseName: "多龙梅西亚",
+
 	attacks: [
 		{
 			cost: [
