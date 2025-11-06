@@ -146,6 +146,11 @@ export interface Card {
 	}
 
 	/**
+	 * Simplified Chinese name for the card
+	 */
+	chineseName?: string
+
+	/**
 	 * Card illustrator
 	 */
 	illustrator?: string

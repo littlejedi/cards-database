@@ -10,10 +10,10 @@ import { variant_detailed } from "../../public/v2/api";
 import { getChineseNameByDexId } from '../../../meta/translations/pokemon-names'
 
 /**
- * Enhance a card with Chinese translation for Pokémon names
+ * Populate Chinese name for Pokémon cards based on dexId
  */
-function enhanceCardWithChineseName(card: Card): Card {
-	// Only enhance if it's a Pokémon card with a dexId
+function populateChineseName(card: Card): Card {
+	// Only populate if it's a Pokémon card with a dexId
 	if (!card.dexId || !Array.isArray(card.dexId) || card.dexId.length === 0 || typeof card.name !== 'object') {
 		return card
 	}
@@ -25,16 +25,10 @@ function enhanceCardWithChineseName(card: Card): Card {
 		return card
 	}
 
-	// Create enhanced card with Chinese name in translations field
+	// Create card with Chinese name in chineseName field
 	return {
 		...card,
-		translations: {
-			...card.translations,
-			name: {
-				...(card.translations?.name || {}),
-				'zh': chineseName
-			}
-		}
+		chineseName: chineseName
 	}
 }
 
@@ -52,9 +46,9 @@ export async function getCardPictures(cardId: string, card: Card, lang: Supporte
 }
 
 export async function cardToCardSimple(id: string, card: Card, lang: SupportedLanguages): Promise<CardResume> {
-	// Enhance card with Chinese name if needed
-	const enhancedCard = enhanceCardWithChineseName(card)
-	
+	// Populate Chinese name if needed
+	const enhancedCard = populateChineseName(card)
+
 	const cardName = resolveText(enhancedCard.name, lang, enhancedCard.translations)
 	if (!cardName) {
 		throw new Error(`Card (${enhancedCard.set.id}-${id}) has no name in (${lang})`)
@@ -107,8 +101,8 @@ function variantsToVariantsDetailed(variants: CardSingle['variants'],lang: Suppo
 
 // eslint-disable-next-line max-lines-per-function
 export async function cardToCardSingle(localId: string, card: Card, lang: SupportedLanguages): Promise<CardSingle> {
-	// Enhance card with Chinese name if needed
-	const enhancedCard = enhanceCardWithChineseName(card)
+	// Populate Chinese name if needed
+	const enhancedCard = populateChineseName(card)
 	
 	const image = await getCardPictures(localId, enhancedCard, lang)
 
@@ -205,8 +199,10 @@ export async function cardToCardSingle(localId: string, card: Card, lang: Suppor
 		updated: await getCardLastEdit(localId, enhancedCard, lang),
 
 		thirdParty: enhancedCard.thirdParty,
-		
-		translations: enhancedCard.translations
+
+		translations: enhancedCard.translations,
+
+		chineseName: enhancedCard.chineseName
 	}
 }
 

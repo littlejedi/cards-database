@@ -336,7 +336,7 @@ export interface Card extends CardResume {
 	updated: string
 
 	/**
-	 * 
+	 *
 	 * Additional translations for the card (e.g., Chinese names for Pokémon)
 	 */
 	translations?: {
@@ -344,6 +344,11 @@ export interface Card extends CardResume {
 			[key: string]: string
 		}
 	}
+
+	/**
+	 * Simplified Chinese name for the card
+	 */
+	chineseName?: string
 }
 
 /**
