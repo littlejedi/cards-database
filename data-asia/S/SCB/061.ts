@@ -4,6 +4,8 @@ import Set from "../SCB"
 const card: Card = {
 	set: Set,
 
+	chineseName: "风铃铃",
+
 	name: {
 		'zh-tw': "風鈴鈴"
 	},

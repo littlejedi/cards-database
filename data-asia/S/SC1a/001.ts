@@ -4,6 +4,8 @@ import { Card } from "../../../interfaces"
 const card: Card = {
 	set: Set,
 
+	chineseName: "飞天螳螂",
+
 	name: {
 		'zh-tw': "飛天螳螂"
 	},

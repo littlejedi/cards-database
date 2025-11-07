@@ -4,6 +4,8 @@ import Set from "../S11"
 const card: Card = {
 	set: Set,
 
+	chineseName: "晃晃斑",
+
 	name: {
 		'zh-tw': "晃晃斑"
 	},

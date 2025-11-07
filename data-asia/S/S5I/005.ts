@@ -4,6 +4,8 @@ import Set from "../S5I"
 const card: Card = {
 	set: Set,
 
+	chineseName: "粉蝶蛹",
+
 	name: {
 		'zh-tw': "粉蝶蛹",
 		th: "โคฟูไร"

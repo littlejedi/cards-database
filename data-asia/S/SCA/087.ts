@@ -4,6 +4,8 @@ import Set from "../SCA"
 const card: Card = {
 	set: Set,
 
+	chineseName: "聒噪鸟",
+
 	name: {
 		'zh-tw': "聒噪鳥"
 	},

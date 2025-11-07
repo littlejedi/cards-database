@@ -4,6 +4,8 @@ import Set from "../SVD"
 const card: Card = {
 	set: Set,
 
+	chineseName: "小锻匠",
+
 	name: {
 		'zh-tw': "小鍛匠"
 	},

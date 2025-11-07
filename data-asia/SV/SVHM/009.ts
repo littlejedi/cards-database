@@ -4,6 +4,8 @@ import Set from "../SVHM"
 const card: Card = {
 	set: Set,
 
+	chineseName: "密勒顿ex",
+
 	name: {
 		'zh-tw': "密勒頓ex",
 		th: "มิไรดอนex",

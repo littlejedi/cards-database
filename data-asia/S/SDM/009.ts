@@ -4,6 +4,8 @@ import Set from "../SDM"
 const card: Card = {
 	set: Set,
 
+	chineseName: "胖甜妮",
+
 	name: {
 		'zh-tw': "胖甜妮"
 	},
