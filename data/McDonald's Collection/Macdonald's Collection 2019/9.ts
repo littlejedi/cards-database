@@ -3,6 +3,8 @@ import Set from '../Macdonald\'s Collection 2019'
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "刺耳声",
 	illustrator: "Mitsuhiro Arita",
 	category: "Pokemon",
 

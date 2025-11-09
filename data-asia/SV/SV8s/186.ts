@@ -4,6 +4,8 @@ import Set from "../SV8s"
 const card: Card = {
 	set: Set,
 
+	chineseName: "太阳形态 变隐龙",
+
 	name: {
 		id: "Castform Wujud Matahari"
 	},

@@ -4,6 +4,8 @@ import Set from "../SVP Black Star Promos"
 const card: Card = {
 	set: Set,
 
+	chineseName: "戴着灰色毡帽的皮卡丘",
+
 	name: {
 		en: "Pikachu with Grey Felt Hat",
 		pt: "Pikachu com Chapéu de feltro Cinza"

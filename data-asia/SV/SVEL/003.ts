@@ -4,6 +4,8 @@ import Set from "../SVEL"
 const card: Card = {
 	set: Set,
 
+	chineseName: "加热洛托姆",
+
 	name: {
 		'zh-tw': "加熱洛托姆"
 	},

@@ -4,6 +4,8 @@ import Set from "../SC2D"
 const card: Card = {
 	set: Set,
 
+	chineseName: "大针蜂",
+
 	name: {
 		'zh-tw': "大針蜂"
 	},

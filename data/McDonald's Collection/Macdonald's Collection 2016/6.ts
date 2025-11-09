@@ -3,6 +3,8 @@ import Set from '../Macdonald\'s Collection 2016'
 
 const card: Card = {
 	set: Set,
+
+	chineseName: "摇尾巴",
 	illustrator: "Naoki Saito",
 	category: "Pokemon",
 

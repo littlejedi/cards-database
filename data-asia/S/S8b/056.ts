@@ -4,6 +4,8 @@ import Set from "../S8b"
 const card: Card = {
 	set: Set,
 
+	chineseName: "莫鲁贝可V-UNION",
+
 	name: {
 		'zh-tw': "莫魯貝可V-UNION"
 	},

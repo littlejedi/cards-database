@@ -4,6 +4,8 @@ import Set from '../Best of game'
 const card: Card = {
 	set: Set,
 
+	chineseName: "火箭队的超梦",
+
 	name: {
 		en: "Rocket’s Mewtwo"
 	},

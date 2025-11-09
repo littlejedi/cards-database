@@ -4,6 +4,8 @@ import Set from "../SV6s"
 const card: Card = {
 	set: Set,
 
+	chineseName: "铁包袱",
+
 	name: {
 		id: "Iron Bundle"
 	},

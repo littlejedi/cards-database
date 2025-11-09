@@ -4,6 +4,8 @@ import Set from "../SVAW"
 const card: Card = {
 	set: Set,
 
+	chineseName: "谜拟Ｑex",
+
 	name: {
 		'zh-tw': "謎擬Ｑex",
 		th: "มิมิคคิวex",
