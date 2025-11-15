@@ -39,6 +39,7 @@ const card: Card = {
 		en: "Pidove"
 	},
 
+	chineseName: "豆豆鸽",
 	rarity: "None",
 	hp: 40,
 	types: ["Colorless"],

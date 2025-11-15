@@ -8,6 +8,7 @@ const card: Card = {
 		en: "Oddish",
 		pt: "Oddish"
 	},
+	chineseName: "走路草",
 
 	rarity: "None",
 	category: "Pokemon",

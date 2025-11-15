@@ -9,6 +9,7 @@ const card: Card = {
 		pt: "Pikachu",
 	},
 
+	chineseName: "皮卡丘",
 	rarity: "None",
 	category: "Pokemon",
 	hp: 50,
