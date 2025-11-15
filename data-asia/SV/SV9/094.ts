@@ -4,6 +4,8 @@ import Set from "../SV9"
 const card: Card = {
 	set: Set,
 
+	chineseName: "艾莉丝的斗志",
+
 	name: {
 		ja: "アイリスの闘志",
 		'zh-tw': "艾莉絲的鬥志",

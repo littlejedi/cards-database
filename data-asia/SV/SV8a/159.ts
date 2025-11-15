@@ -4,6 +4,8 @@ import Set from "../SV8a"
 const card: Card = {
 	set: Set,
 
+	chineseName: "极限腰带",
+
 	name: {
 		ja: "マキシマムベルト",
 		id: "Sabuk Maksimum",

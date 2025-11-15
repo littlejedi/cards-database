@@ -4,6 +4,8 @@ import Set from "../SV8"
 const card: Card = {
 	set: Set,
 
+	chineseName: "急进开关",
+
 	name: {
 		ja: "スクランブルスイッチ",
 		'zh-tw': "急進開關",

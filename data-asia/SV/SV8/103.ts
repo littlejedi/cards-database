@@ -4,6 +4,8 @@ import Set from "../SV8"
 const card: Card = {
 	set: Set,
 
+	chineseName: "希特隆的机智",
+
 	name: {
 		ja: "シトロンの機転",
 		'zh-tw': "希特隆的機智",
