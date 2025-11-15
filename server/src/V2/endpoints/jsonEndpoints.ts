@@ -1,5 +1,5 @@
 import { objectKeys } from '@dzeio/object-util'
-import type { Card as SDKCard } from '@tcgdex/sdk'
+import type { Card as SDKCard, SupportedLanguages } from '@tcgdex/sdk'
 import apicache from 'apicache'
 import express, { type Request } from 'express'
 import { Errors, sendError } from '../../libs/Errors'
@@ -74,6 +74,51 @@ server
 	})
 
 	/**
+	 * Global Search Endpoint (searches across all languages)
+	 * ex: /v2/search?q=皮卡丘
+	 */
+	.get('/search', async (req: CustomRequest, res): Promise<void> => {
+		const searchQuery = req.query.q as string
+
+		if (!searchQuery || searchQuery.trim() === '') {
+			res.status(400).json({
+				error: 'Search query parameter "q" is required',
+				example: '/v2/search?q=皮卡丘'
+			})
+			return
+		}
+
+		const lowerQuery = searchQuery.toLowerCase().trim()
+
+		// Only search through specific languages
+		const searchLanguages: SupportedLanguages[] = ['en', 'ja', 'zh-tw', 'zh-cn', 'zh'] as any[]
+
+		// Collect all matching cards without deduplication
+		const matchingCards: any[] = []
+
+		// Search through specified languages
+		for (const lang of searchLanguages) {
+			const cards = await getAllCards(lang)
+			
+			for (const card of cards) {
+				// Skip if card is null or undefined
+				if (!card) {
+					continue
+				}
+
+				// Check if the card has a chineseName field that matches
+				const chineseName = (card as any).chineseName?.toLowerCase()
+				if (chineseName && chineseName.includes(lowerQuery)) {
+					matchingCards.push(card)
+				}
+			}
+		}
+
+		// Return the full card details
+		res.json(matchingCards)
+	})
+
+	/**
 	 * Allows the user to fetch a random card/set/serie from the database
 	 */
 	.get('/:lang/random/:what', async (req: CustomRequest, res): Promise<void> => {
@@ -107,6 +152,46 @@ server
 		res.json(data[item])
 	})
 
+
+	/**
+	 * Search Endpoint
+	 * ex: /v2/zh-cn/search?q=皮卡丘 or /v2/zh/search?q=皮卡丘
+	 */
+	.get('/:lang/search', async (req: CustomRequest, res): Promise<void> => {
+		const { lang } = req.params
+		const searchQuery = req.query.q as string
+
+		if (!checkLanguage(lang)) {
+			sendError(Errors.LANGUAGE_INVALID, res, { lang })
+			return
+		}
+
+		if (!searchQuery || searchQuery.trim() === '') {
+			res.status(400).json({
+				error: 'Search query parameter "q" is required',
+				example: '/v2/zh-cn/search?q=皮卡丘 or /v2/zh/search?q=皮卡丘'
+			})
+			return
+		}
+
+		const lowerQuery = searchQuery.toLowerCase().trim()
+
+		// Get all cards for the language
+		const allCards = await getAllCards(lang)
+
+		// Filter cards by chineseName field
+		const matchingCards = allCards.filter((card: any) => {
+			// Check if the card has a chineseName field
+			const chineseName = card.chineseName?.toLowerCase()
+			if (chineseName && chineseName.includes(lowerQuery)) {
+				return true
+			}
+			return false
+		})
+
+		// Return the full card details
+		res.json(matchingCards)
+	})
 
 	/**
 	 * Listing Endpoint

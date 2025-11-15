@@ -57,6 +57,8 @@ zhtw.forEach((it) => list[`${it.id.toLowerCase()}zh-tw`] = it)
 id.forEach((it) => list[`${it.id.toLowerCase()}id`] = it)
 th.forEach((it) => list[`${it.id.toLowerCase()}th`] = it)
 zhcn.forEach((it) => list[`${it.id.toLowerCase()}zh-cn`] = it)
+// Add 'zh' as alias for 'zh-cn'
+zhcn.forEach((it) => list[`${it.id.toLowerCase()}zh`] = it)
 
 const cards = {
 	en: en,
@@ -77,6 +79,7 @@ const cards = {
 	id: id,
 	th: th,
 	'zh-cn': zhcn,
+	'zh': zhcn, // Alias for zh-cn
 } as const
 
 const cache = new Cache()

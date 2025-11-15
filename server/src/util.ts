@@ -20,7 +20,8 @@ export const languages = [
 	'zh-tw',
 	'id',
 	'th',
-	'zh-cn'
+	'zh-cn',
+	'zh'
 ] as const
 
 export function checkLanguage(str: string): str is SupportedLanguages {
